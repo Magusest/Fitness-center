@@ -1432,6 +1432,9 @@ button,
   border: 4px solid #ffffff;
   margin: auto 0;
   grid-column: 2/-1;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 @media (max-width: 1199px) {
   .greeting a {
@@ -1444,9 +1447,139 @@ button,
   }
 }
 
+.greeting a:hover,
+.greeting a:focus {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.greeting a:active {
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
 @media (max-width: 767px) {
   .greeting picture {
     display: none;
+  }
+}
+
+.intro {
+  position: relative;
+  min-width: 320px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 120px 103px 235px 163px;
+}
+@media (max-width: 1199px) {
+  .intro {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 100px 45px 183px;
+  }
+}
+@media (max-width: 767px) {
+  .intro {
+    padding: 70px 0;
+  }
+}
+
+.intro h2 {
+  font-family: "AlumniSans", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+  color: #102654;
+  margin: 0;
+}
+@media (max-width: 1199px) {
+  .intro h2 {
+    font-size: 42px;
+    line-height: 50px;
+    text-align: center;
+  }
+}
+
+.intro p {
+  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #102654;
+  margin: 0;
+}
+@media (max-width: 1199px) {
+  .intro p {
+    text-align: center;
+  }
+}
+
+.intro__descriptions {
+  max-width: 355px;
+}
+@media (max-width: 1199px) {
+  .intro__descriptions {
+    max-width: none;
+  }
+}
+
+.intro__descriptions p {
+  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: #102654;
+}
+@media (max-width: 1199px) {
+  .intro__descriptions p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1199px) {
+  .intro__hidden {
+    display: none;
+  }
+}
+
+@media (max-width: 1199px) {
+  .intro picture {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1199px) {
+  .intro img {
+    width: 100%;
+  }
+}
+
+.intro iframe {
+  position: absolute;
+  width: 364px;
+  height: 228px;
+  bottom: 0;
+  left: 30%;
+}
+@media (max-width: 1199px) {
+  .intro iframe {
+    width: 266px;
+    height: 167px;
+  }
+}
+@media (max-width: 767px) {
+  .intro iframe {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
   }
 }
 

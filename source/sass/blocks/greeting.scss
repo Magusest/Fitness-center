@@ -99,6 +99,7 @@
   border: 4px solid $color-default-white;
   margin: auto 0;
   grid-column: 2/-1;
+  transition: 0.5s;
 
   @include vp-1199 {
     padding: 24px 33px;
@@ -107,6 +108,16 @@
   @include vp-767 {
     grid-column: 1/-1;
   }
+}
+
+.greeting a:hover,
+.greeting a:focus {
+  background-color: $color-default-white;
+  color: $color-default-black;
+}
+
+.greeting a:active {
+  transform: scale(0.9);
 }
 
 .greeting picture {
