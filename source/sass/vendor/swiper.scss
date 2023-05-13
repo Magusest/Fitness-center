@@ -24,12 +24,13 @@
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  overflow: hidden;
   list-style: none;
+  overflow: hidden;
   padding: 0;
   /* Fix of Webkit flickering */
   z-index: 1;
 }
+
 .swiper-vertical > .swiper-wrapper {
   flex-direction: column;
 }
@@ -42,6 +43,7 @@
   transition-property: transform;
   box-sizing: content-box;
 }
+
 .swiper-android .swiper-slide,
 .swiper-wrapper {
   transform: translate3d(0px, 0, 0);
@@ -183,15 +185,15 @@
 .swiper-button-next {
   position: absolute;
   top: 50%;
-  width: calc(var(--swiper-navigation-size) / 44 * 27);
-  height: var(--swiper-navigation-size);
+  width: 16px;
+  height: 32px;
   margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
-  z-index: 10;
+  z-index: 100;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--swiper-navigation-color, var(--swiper-theme-color));
+  color: #AFAFAF;
 }
 .swiper-button-prev.swiper-button-disabled,
 .swiper-button-next.swiper-button-disabled {
