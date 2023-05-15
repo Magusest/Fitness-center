@@ -1,0 +1,146 @@
+.sale {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  justify-content: space-between;
+  gap: 20px;
+  padding: 100px 0;
+
+  @include vp-1199 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sale h2 {
+  font-family: $ff-alumni;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 64px;
+  color: $color-sapphire;
+  text-align: center;
+  margin: 0;
+  grid-column: 1/-1;
+
+  @include vp-1199 {
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+.sale a {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.5s;
+  margin: auto;
+}
+
+.sale a:hover,
+.sale a:focus {
+  padding-bottom: 10px;
+}
+
+.sale__promo {
+  display: flex;
+  // height: 462px;
+
+  @include vp-767 {
+    flex-direction: column;
+  }
+}
+
+.sale__promo-info {
+  background-color: $color-torch-red;
+  padding: 45px;
+  padding-bottom: 50px;
+  color: $color-default-white;
+}
+
+.sale__promo-info h3 {
+  font-size: 28px;
+  line-height: 44px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.sale__promo-info h3 span {
+  font-size: 70px;
+}
+
+.sale__promo-info p {
+  font-size: 18px;
+  line-height: 25px;
+  margin: 0;
+}
+
+.sale__promo-info a {
+  color: $color-default-white;
+  border-bottom: 1px solid $color-default-white;
+}
+
+.sale__promo picture {
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+
+}
+
+.sale__promo img {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sale__offers {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  @include vp-1199 {
+    display: grid;
+    grid-template-columns: repeat(2, 45%);
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  @include vp-767 {
+    text-align: center;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.sale__offer {
+  padding: 35px;
+  color: $color-sapphire;
+  border: 7px solid;
+  border-image: $red-to-blue-diagonal;
+}
+
+.sale__offer h3 {
+  font-size: 26px;
+  line-height: 38px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.sale__offer p {
+  font-size: 16px;
+  // margin: 0;
+}
+
+.sale__offer a {
+  color: $color-sapphire;
+  border-bottom: 1px solid $color-sapphire;
+}

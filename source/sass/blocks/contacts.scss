@@ -1,0 +1,83 @@
+.contacts {
+  max-width: 460px;
+
+  @include vp-1199 {
+    margin: auto;
+  }
+
+  @include vp-767 {
+    padding: 0 15px;
+  }
+}
+
+.contacts h2 {
+  width: fit-content;
+  font-family: $ff-alumni;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 84px;
+  color: $color-sapphire;
+  margin: 0;
+
+  @include vp-1199 {
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 48px;
+  }
+}
+
+.contacts ul {
+  position: relative;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 30px 120px;
+  color: $color-sapphire;
+  margin: 0;
+  padding: 0;
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contacts ul::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  background-color: $color-light-slate-grey;
+  left: 60%;
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.contacts h3 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+
+  @include vp-1199 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.contacts p,
+.contacts a {
+  font-size: 14px;
+  line-height: 21px;
+  margin: 0;
+
+  @include vp-1199 {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}

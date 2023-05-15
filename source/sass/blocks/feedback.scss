@@ -1,0 +1,26 @@
+.feedback {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+
+  @include vp-1199 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.feedback__form {
+  background-color: $color-sapphire;
+  padding: 56px 170px 70px 30px;
+
+  @include vp-1199 {
+    padding: 70px 0;
+  }
+}
+
+.feedback__contacts {
+  border-top: 1px solid #74819C;
+  padding: 56px 50px 70px 120px;
+
+  @include vp-1199 {
+    padding: 70px 0;
+  }
+}
