@@ -1,9 +1,15 @@
 .promo {
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: 43.1% 56.9%;
+  padding: 120px 0 100px;
+
+  @include vp-1199 {
+    padding: 98px 0;
+  }
 
   @include vp-767 {
     grid-template-columns: auto;
+    padding: 70px 0;
   }
 }
 
@@ -26,12 +32,16 @@
   font-weight: 600;
   font-size: 82px;
   line-height: 78px;
-  align-self: center;
+  letter-spacing: 0.03em;
+  align-self: baseline;
   margin: 0;
+  margin-left: 13px;
+
 
   @include vp-1199 {
     font-size: 48px;
     line-height: 46px;
+    margin-left: 8px;
   }
 }
 
@@ -42,38 +52,104 @@
 .promo__date {
   display: flex;
   flex-direction: column;
+  justify-self: auto;
+  margin-top: -10px;
+  margin-left: 29px;
+
+  @include vp-1199 {
+    margin-top: -2px;
+    margin-left: 19px;
+    justify-self: end;
+  }
+
+  @media (max-width: 320px) {
+    justify-self: auto;
+  }
+
 }
 
 .promo__date div {
   display: flex;
+  gap: 7px;
   align-content: center;
   border-top: 1px solid $color-default-white;
   margin-right: auto;
+
+  @include vp-1199 {
+    gap: 4px;
+  }
+}
+
+.promo__time {
+  justify-self: end;
+  margin-top: -12px;
+
+  @include vp-1199 {
+    margin-top: -9px;
+  }
+
+  @include vp-767 {
+    margin-top: -1px;
+  }
 }
 
 .promo__time .promo__major {
+  position: relative;
   border-top: 1px solid $color-default-white;
   margin-right: auto;
+
+  @include vp-1199 {
+    border: none;
+    margin-top: -2px;
+    margin-right: 2px;
+  }
+}
+
+.promo__time .promo__major::after {
+  @include vp-1199 {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: $color-default-white;
+  }
 }
 
 .promo__major {
   font-weight: 700;
   font-size: 40px;
-  line-height: 60px;
+  line-height: 47px;
 
   @include vp-1199 {
     font-size: 24px;
     line-height: 36px;
+    margin-top: -3px;
+  }
+}
+
+.promo__date .promo__major {
+  @include vp-1199 {
+    margin-top: -3px;
+  }
+}
+
+.promo__date .promo__minor {
+  @include vp-1199 {
+    margin-top: -3px;
   }
 }
 
 .promo__minor {
   font-size: 14px;
-  line-height: 21px;
+  line-height: 18px;
+  align-self: center;
 
   @include vp-1199 {
     font-size: 10px;
-    line-height: 15px;
+    line-height: 12px;
+    margin-top: -3px;
   }
 }
 
@@ -81,7 +157,7 @@
   font-family: $ff-roboto;
   font-weight: 400;
   font-size: 18px;
-  line-height: 27px;
+  line-height: 36px;
 
   @include vp-1199 {
     font-size: 12px;
@@ -89,16 +165,26 @@
   }
 }
 
+
+
 .promo__description {
+  position: relative;
   order: 1;
   grid-column: 1/-1;
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
+  top: -9px;
 
   @include vp-1199 {
     font-size: 12px;
     line-height: 18px;
+    left: 1px;
+  }
+
+  @include vp-767 {
+    top: 1px;
+    margin-bottom: 31px;
   }
 }
 
@@ -110,22 +196,30 @@
   font-weight: 700;
   font-size: 12px;
   line-height: 14px;
+  letter-spacing: 0.05em;
   color: $color-default-white;
   text-transform: uppercase;
   text-align: center;
   border: 2px solid $color-default-white;
-  margin: auto 0;
-  padding: 28px;
+  margin: 0;
+  margin-top: auto;
+  padding: 25px;
 
   @include vp-1199 {
     font-size: 10px;
     line-height: 12px;
-    padding: 16px;
+    padding: 13px;
+  }
+
+  @include vp-767 {
+    margin-top: 30px;
   }
 }
 
 .promo img {
   @include vp-767 {
+    object-fit: cover;
     width: 100%;
+    height: 292px;
   }
 }
