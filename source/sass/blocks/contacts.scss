@@ -101,6 +101,14 @@
   }
 }
 
+.contacts a {
+transition: 0.5s;
+
+  @include hover-focus {
+    color: $color-egyptian-blue;
+  }
+}
+
 .contacts__item {
   @include vp-767 {
     grid-row: 2/3;

@@ -64,6 +64,11 @@
 
 .footer__nav a {
   color: $color-default-white;
+  transition: 0.5s;
+
+  @include hover-focus {
+    color: $color-torch-red;
+  }
 }
 
 .footer__social-media ul {
@@ -85,6 +90,10 @@
   display: flex;
   width: 100%;
   height: 100%;
+
+  @include hover-focus {
+    background-color: $color-crimson-transparent;
+  }
 }
 
 .footer__social-media svg {

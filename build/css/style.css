@@ -2324,6 +2324,24 @@ button,
     height: 24px;
   }
 }
+@media (hover: hover) {
+  .logo img:hover:not(.focus-visible) {
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+.logo img.focus-visible:focus {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
 
 .greeting {
   min-width: 320px;
@@ -3353,6 +3371,9 @@ button,
   margin: 0;
   margin-top: auto;
   padding: 25px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 @media (max-width: 1199px) {
   .promo__wrapper a {
@@ -3365,6 +3386,16 @@ button,
   .promo__wrapper a {
     margin-top: 30px;
   }
+}
+@media (hover: hover) {
+  .promo__wrapper a:hover:not(.focus-visible) {
+    background-color: #ffffff;
+    color: #ed0233;
+  }
+}
+.promo__wrapper a.focus-visible:focus {
+  background-color: #ffffff;
+  color: #ed0233;
 }
 
 @media (max-width: 767px) {
@@ -4277,6 +4308,9 @@ button,
   -ms-flex-item-align: start;
       -ms-grid-row-align: start;
       align-self: start;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 @media (max-width: 767px) {
   .sale__link {
@@ -4410,6 +4444,9 @@ button,
   -ms-flex-item-align: start;
       -ms-grid-row-align: start;
       align-self: start;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 @media (max-width: 1199px) {
   .sale__small-link {
@@ -4958,6 +4995,20 @@ button,
   }
 }
 
+.contacts a {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+@media (hover: hover) {
+  .contacts a:hover:not(.focus-visible) {
+    color: #103aae;
+  }
+}
+.contacts a.focus-visible:focus {
+  color: #103aae;
+}
+
 @media (max-width: 767px) {
   .contacts__item {
     -ms-grid-row: 2;
@@ -5052,6 +5103,17 @@ button,
 
 .footer__nav a {
   color: #ffffff;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+@media (hover: hover) {
+  .footer__nav a:hover:not(.focus-visible) {
+    color: #ed0233;
+  }
+}
+.footer__nav a.focus-visible:focus {
+  color: #ed0233;
 }
 
 .footer__social-media ul {
@@ -5079,6 +5141,14 @@ button,
   display: flex;
   width: 100%;
   height: 100%;
+}
+@media (hover: hover) {
+  .footer__social-media a:hover:not(.focus-visible) {
+    background-color: rgba(209, 10, 66, 0.2);
+  }
+}
+.footer__social-media a.focus-visible:focus {
+  background-color: rgba(209, 10, 66, 0.2);
 }
 
 .footer__social-media svg {
