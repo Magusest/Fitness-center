@@ -9,4 +9,3 @@ export function initVideo() {
     videoContainer.insertAdjacentHTML('afterbegin', targetVideo);
   });
 }
-

@@ -29,7 +29,7 @@
 
 .header__contact a {
   font-family: $ff-alumni;
-  font-size: 600;
+  font-weight: 600;
   font-size: 26px;
   line-height: 31px;
   letter-spacing: 0.03em;
@@ -39,7 +39,6 @@
     font-size: 24px;
     line-height: 30px;
     letter-spacing: 0.02em;
-
   }
 
   @include vp-767 {

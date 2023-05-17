@@ -4,6 +4,7 @@ import {Form} from './modules/form-validate/form';
 import {initTabs} from './modules/tabs/init-tabs';
 import {initSlider} from './modules/sliders/slider';
 import {initVideo} from './modules/video/video';
+import {initSuccessSend} from './modules/form/form';
 
 // ---------------------------------
 
@@ -24,6 +25,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initTabs();
     initSlider();
     initVideo();
+    initSuccessSend();
     const form = new Form();
     window.form = form;
     form.init();

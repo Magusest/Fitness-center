@@ -1,5 +1,7 @@
 import Swiper from '../../vendor/swiper';
 const trainersSwiper = document.querySelector('[data-slider="trainer"]');
+const reviewSwiper = document.querySelector('[data-slider="review"]');
+
 
 export const initSlider = () => {
   if (trainersSwiper) {
@@ -30,13 +32,17 @@ export const initSlider = () => {
     )();
   }
 
-  new Swiper('.review__swiper', {
-    direction: 'horizontal',
-    slidesPerView: 1,
+  if (reviewSwiper) {
+    (() =>
+      new Swiper('.review__swiper', {
+        direction: 'horizontal',
+        slidesPerView: 1,
 
-    navigation: {
-      nextEl: '.review__button--next',
-      prevEl: '.review__button--prev',
-    },
-  })();
+        navigation: {
+          nextEl: '.review__button--next',
+          prevEl: '.review__button--prev',
+        },
+      })
+    )();
+  }
 };
