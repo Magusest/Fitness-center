@@ -19,6 +19,7 @@
   font-size: 54px;
   line-height: 65px;
   letter-spacing: 0.03em;
+  color: $color-sapphire;
   text-align: center;
   margin: 0;
   margin-left: 9px;
@@ -82,12 +83,10 @@
 .review__wrapper {
   display: flex;
   position: relative;
-  // max-width: 684px;
   width: calc(672 / 1160 * 100%);
   margin: 0 auto;
 
   @include vp-1199 {
-    // width: 100%;
     width: calc(672 / 678 * 100%);
   }
 
@@ -97,11 +96,9 @@
 }
 
 .review__slider {
-  // max-width: 560px;
   width: calc(560 / 672 * 100%);
 
   @include vp-1199 {
-    // max-width: 566px;
     width: calc(566 / 672 * 100%);
   }
 

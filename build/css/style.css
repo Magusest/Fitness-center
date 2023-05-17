@@ -2726,6 +2726,7 @@ button,
       -ms-transform: translate(-39%);
           transform: translate(-39%);
   background-color: rgba(20, 54, 122, 0.5);
+  z-index: 2;
 }
 @media (max-width: 1199px) {
   .intro__video {
@@ -2746,6 +2747,10 @@ button,
     width: 100%;
     margin-top: 40px;
   }
+}
+
+.intro__video div {
+  background-color: rgba(20, 54, 122, 0.5);
 }
 
 .intro__video iframe {
@@ -2774,10 +2779,12 @@ button,
 }
 
 .intro__video img {
+  position: relative;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  z-index: -1;
 }
 
 .intro__video button {
@@ -3440,6 +3447,7 @@ button,
   margin: 0;
   margin-bottom: 48px;
   margin-left: 2px;
+  color: #102654;
 }
 @media (max-width: 1199px) {
   .trainers h2 {
@@ -4174,6 +4182,7 @@ button,
   font-size: 54px;
   line-height: 65px;
   letter-spacing: 0.03em;
+  color: #102654;
   text-align: center;
   margin: 0;
   margin-bottom: 34px;
@@ -4513,6 +4522,7 @@ button,
   font-size: 54px;
   line-height: 65px;
   letter-spacing: 0.03em;
+  color: #102654;
   text-align: center;
   margin: 0;
   margin-left: 9px;
