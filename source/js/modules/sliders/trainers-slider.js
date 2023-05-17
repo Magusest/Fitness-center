@@ -1,14 +1,13 @@
 import Swiper from '../../vendor/swiper';
 
 export function getTrainerSlider() {
-  const slider = new Swiper('.swiper-trainers', {
+  const slider = new Swiper('.trainers__swiper', {
     direction: 'horizontal',
     loop: true,
 
     breakpoints: {
       320: {
         slidesPerView: 1,
-        spaceBetween: 10,
       },
       768: {
         slidesPerView: 2,

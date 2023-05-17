@@ -1,0 +1,283 @@
+.trainers {
+  padding-top: 6px;
+  padding-bottom: 140px;
+
+  @include vp-1199 {
+    padding-top: 2px;
+    padding-bottom: 100px;
+  }
+
+  @include vp-767 {
+    padding-top: 4px;
+    padding-bottom: 70px;
+  }
+}
+
+.trainers__slider {
+  @include vp-1199 {
+    max-width: 566px;
+  }
+}
+
+.trainers h2 {
+  font-family: $ff-alumni;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+  letter-spacing: 0.03em;
+  margin: 0;
+  margin-bottom: 48px;
+  margin-left: 2px;
+
+  @include vp-1199 {
+    font-size: 42px;
+    line-height: 50px;
+    text-align: center;
+    margin-bottom: 31px;
+    margin-left: -6px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 42px;
+  }
+}
+
+.trainers__wrapper {
+  position: relative;
+  max-width: 1366px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 103px;
+
+  @include vp-1199 {
+    padding: 0 45px;
+  }
+
+  @include vp-767 {
+    padding: 0 47px;
+  }
+}
+
+.trainers__list {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.trainers__image {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+}
+
+.trainers__image img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 260/294;
+
+  @include vp-1199 {
+    aspect-ratio: 268/294;
+  }
+
+  @include vp-767 {
+    aspect-ratio: 226/274;
+  }
+}
+
+.trainers__item {
+  display: grid;
+  max-width: 260px;
+  max-height: none;
+  height: auto;
+  aspect-ratio: 1/1;
+
+  @include vp-1199 {
+    max-width: 268px;
+  }
+
+  @include vp-767 {
+    max-width: 100%;
+  }
+}
+
+.trainers__item:hover .trainers__about,
+.trainers__item:focus .trainers__about,
+.trainers__item:active .trainers__about {
+  display: block;
+  margin-top: -4px;
+}
+
+
+.trainers__item:hover .trainers__info,
+.trainers__item:focus .trainers__info,
+.trainers__item:active .trainers__info {
+  background-color: rgba($color-sapphire, 0.89);
+  padding-top: 9px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+
+  @include vp-1199 {
+    padding-top: 15px;
+    padding-right: 28px;
+    padding-bottom: 16px;
+    padding-left: 28px;
+
+    h3 {
+      margin-bottom: 0;
+      margin-left: -9px;
+    }
+  }
+
+  @include vp-767 {
+    padding-top: 15px;
+    padding-right: 20px;
+    padding-bottom: 16px;
+    padding-left: 20px;
+
+    h3 {
+      margin-left: 0;
+    }
+  }
+}
+
+.trainers__info {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  color: $color-default-white;
+  display: grid;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  padding-top: 9px;
+  padding-right: 30px;
+  padding-bottom: 24px;
+  padding-left: 30px;
+
+  @include vp-767 {
+    height: 100%;
+    aspect-ratio: 1/1.21;
+  }
+}
+
+.trainers__info::-webkit-scrollbar {
+  width: 0;
+}
+
+
+.trainers__info h3 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  justify-self: center;
+  align-self: end;
+  margin: 0;
+
+
+  @include vp-1199 {
+    margin-bottom: 0;
+    margin-left: 10px;
+  }
+}
+
+.trainers__about {
+  display: none;
+}
+
+.trainers__about p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $color-spindle;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 34px;
+
+  @include vp-1199 {
+    margin-left: -8px;
+  }
+
+  @include vp-767 {
+    margin-left: 0;
+  }
+}
+
+.trainers__about-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 25px;
+
+  @include vp-1199 {
+    margin-left: 27px;
+  }
+
+  @include vp-767 {
+    margin-left: 14px;
+  }
+}
+
+
+.trainers__about-item {
+  position: relative;
+  display: flex;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  padding-left: 16px;
+
+  &:not(:last-child) {
+    margin-bottom: 13px;
+  }
+}
+
+.trainers__about-item::before {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: $color-default-white;
+  top: 6px;
+  left: 0;
+}
+
+.trainers__button {
+  border: none;
+  color: $color-light-slate-grey;
+  background: transparent;
+  margin-top: -16px;
+}
+
+.trainers__button::after {
+  font-size: 34px;
+
+  @include vp-767 {
+    font-size: 18px;
+  }
+}
+
+.trainers__button--prev {
+  margin-left: 38px;
+
+  @include vp-1199 {
+    margin-left: 35px;
+  }
+
+  @include vp-767 {
+    margin-left: 2px;
+  }
+}
+
+.trainers__button--next {
+  margin-right: 37px;
+
+  @include vp-1199 {
+    margin-right: 35px;
+  }
+
+  @include vp-767 {
+    margin-right: 2px;
+  }
+}

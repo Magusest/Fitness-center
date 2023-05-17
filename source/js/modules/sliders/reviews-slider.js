@@ -1,7 +1,7 @@
 import Swiper from '../../vendor/swiper';
 
 export function getReviewsSlider() {
-  const slider = new Swiper('.swiper-reviews', {
+  const slider = new Swiper('.review__swiper', {
     direction: 'horizontal',
 
     navigation: {

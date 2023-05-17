@@ -1,13 +1,16 @@
 .form {
-  width: fit-content;
+  width: 85%;
   min-width: 320px;
-  margin-left: auto;
+  margin-left: 73px;
 
   @include vp-1199 {
     margin: auto;
+    padding: 0 104px 0 74px;
   }
 
   @include vp-767 {
+    width: 100%;
+    margin: 0;
     padding: 0 15px;
   }
 }
@@ -17,43 +20,55 @@
   font-weight: 800;
   font-size: 54px;
   line-height: 84px;
+  letter-spacing: 0.03em;
   color: $color-default-white;
   margin: 0;
 
   @include vp-1199 {
     font-size: 42px;
     line-height: 50px;
+    letter-spacing: 0.025em;
+    margin-left: 1px;
+
   }
 
   @include vp-767 {
     font-size: 32px;
     line-height: 48px;
+    letter-spacing: 0.018em;
+    margin-left: 0;
+    margin-top: -2px;
+
   }
 }
 
 .form form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+  gap: 28px 30px;
+  padding: 16px 0 0 0;
 
   @include vp-1199 {
     gap: 30px 60px;
+    padding: 32px 0 0 0;
   }
 
   @include vp-767 {
     grid-template-columns: 1fr;
+    padding: 31px 0 0 0;
   }
 }
 
 .form input {
   width: 100%;
-  padding: 10px;
+  padding: 0 0 5px 0;
   border: none;
   background-color: transparent;
-  border-bottom: 1px solid #74819C;
+  border-bottom: 2px solid #74819C;
 }
 
 .form input::placeholder {
+  font-size: 14px;
   color: $color-default-white;
 }
 
@@ -63,8 +78,31 @@
   background-color: transparent;
   font-weight: 700;
   font-size: 14px;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   text-align: center;
-  padding: 20px;
+  padding: 16px;
   color: $color-default-white;
+
+  @include vp-767 {
+    margin-top: 9px;
+  }
+}
+
+.form div {
+  position: relative;
+}
+
+.form span {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -24px;
+  width: 240px;
+  color: $color-torch-red;
+
+  @include vp-767 {
+    width: 100%;
+  }
+
 }

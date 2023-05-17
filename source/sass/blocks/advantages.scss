@@ -1,7 +1,15 @@
 .advantages {
   background-color: $color-ghost-white;
-  padding: 98px 0 140px;
+  padding: 98px 0 105px;
   min-width: 320px;
+
+  @include vp-1199 {
+    padding: 92px 0 80px;
+  }
+
+  @include vp-767 {
+    padding: 64px 0 66px;
+  }
 }
 
 .advantages__container {
@@ -14,55 +22,105 @@
   font-weight: 600;
   font-size: 54px;
   line-height: 64px;
+  letter-spacing: 0.03em;
   color: $color-sapphire;
   text-align: center;
   margin: 0;
+  margin-left: 11px;
+  margin-bottom: 28px;
 
   @include vp-1199 {
     font-size: 42px;
     line-height: 50px;
+    margin-left: -22px;
   }
 
   @include vp-767 {
     font-size: 32px;
     line-height: 38px;
+    margin-left: -17px;
   }
 }
 
 .advantages__list {
+  position: relative;
+  max-width: 1366px;
   list-style-type: none;
   display: grid;
-  grid-template-columns: repeat(3, auto);
-  gap: 0 60px;
+  grid-template-columns: 1fr 240px 1fr;
+  grid-template-rows: repeat(2, 134px);
+  gap: 102px 52px;
   margin: 0;
-  padding: 0;
+  padding: 0 165px;
+
 
   @include vp-1199 {
     grid-template-columns: repeat(2, auto);
+    grid-template-rows: auto 239px auto;
+    gap: 30px 45px;
+    padding: 0 45px;
   }
 
   @include vp-767 {
     display: flex;
     flex-direction: column;
+    gap: 0;
+    padding: 0;
   }
+}
+
+.advantages__list::before,
+.advantages__list::after {
+  position: absolute;
+  content: "";
+  width: 25%;
+  height: 2px;
+  background-color: $color-crimson-transparent;
+
+  @include vp-1199 {
+    display: none;
+  }
+}
+
+.advantages__list::before {
+  top: 49%;
+  left: 12%;
+  transform: translateY(-72%);
+}
+
+.advantages__list::after {
+  top: 49%;
+  right: 12%;
+  transform: translateY(-72%);
 }
 
 .advantages__item--space {
   grid-column: 1/2;
-  border-bottom: 2px solid $color-crimson-transparent;
+  padding-left: 20px;
 
   @include vp-1199 {
     border: none;
+    padding-left: 0;
+  }
+
+  @include vp-767 {
+    margin-bottom: 20px;
   }
 }
 
 .advantages__item--parking {
   grid-column: 3/-1;
-  border-bottom: 2px solid $color-crimson-transparent;
+  padding-left: 10px;
+
 
   @include vp-1199 {
     grid-column: 2/-1;
     border: none;
+    padding-left: 0;
+  }
+
+  @include vp-767 {
+    margin-bottom: 46px;
   }
 }
 
@@ -70,6 +128,7 @@
   grid-column: 2/3;
   grid-row: 1/3;
   background-color: $color-sapphire;
+  margin: auto 0;
 
   @include vp-1199 {
     grid-column: 1/-1;
@@ -79,8 +138,21 @@
 
 .advantages__item--comfort {
   grid-column: 1/2;
+  padding-left: 20px;
+
+  @include vp-767 {
+    margin-bottom: 20px;
+    padding-left: 0;
+  }
 }
 
 .advantages__item--experience {
   grid-column: 3/-1;
+  padding-left: 10px;
+
+  @include vp-1199 {
+    grid-column: 2/-1;
+    padding-left: 0;
+  }
+
 }
