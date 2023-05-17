@@ -2292,7 +2292,7 @@ button,
 
 .header__contact a {
   font-family: "AlumniSans", "Arial", sans-serif;
-  font-size: 600;
+  font-weight: 600;
   font-size: 26px;
   line-height: 31px;
   letter-spacing: 0.03em;
@@ -2327,7 +2327,7 @@ button,
 
 .greeting {
   min-width: 320px;
-  background: conic-gradient(from 150.87deg at 16.03% 39.06%, #B80027 -46.69deg, #003D85 32.24deg, #B80027 313.31deg, #003D85 392.24deg);
+  background: conic-gradient(from 150.87deg at 16.03% 39.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
   color: #ffffff;
 }
 
@@ -2774,8 +2774,8 @@ button,
   padding: 14px;
   border: none;
   border-radius: 50%;
-  background: -o-linear-gradient(45.11deg, #003D85 25.38%, #B80027 74.89%);
-  background: linear-gradient(44.89deg, #003D85 25.38%, #B80027 74.89%);
+  background: -o-linear-gradient(45.11deg, #003d85 25.38%, #b80027 74.89%);
+  background: linear-gradient(44.89deg, #003d85 25.38%, #b80027 74.89%);
 }
 @media (max-width: 1199px) {
   .intro__video button {
@@ -2800,8 +2800,8 @@ button,
   -webkit-mask: linear-gradient(#ffffff 0 0) padding-box, linear-gradient(#ffffff 0 0);
           mask: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ffffff)) padding-box, -webkit-gradient(linear, left top, left bottom, color-stop(0, #ffffff));
           mask: linear-gradient(#ffffff 0 0) padding-box, linear-gradient(#ffffff 0 0);
-  -webkit-mask-composite: destination-out;
-  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
 }
 @media (max-width: 1199px) {
   .intro__video button::before {
@@ -3071,8 +3071,8 @@ button,
 .subscription__card:hover a,
 .subscription__card:focus-within a {
   outline: none;
-  background: -o-linear-gradient(352.95deg, #ED0233 17.6%, #003EB7 95.31%);
-  background: linear-gradient(97.05deg, #ED0233 17.6%, #003EB7 95.31%);
+  background: -o-linear-gradient(352.95deg, #ed0233 17.6%, #003eb7 95.31%);
+  background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
   color: #ffffff;
 }
 
@@ -3819,6 +3819,9 @@ button,
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
   padding-left: 20px;
 }
 @media (max-width: 1199px) {
@@ -3836,6 +3839,9 @@ button,
 .advantages__item--parking {
   grid-column: 3/-1;
   padding-left: 10px;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
 }
 @media (max-width: 1199px) {
   .advantages__item--parking {
@@ -3874,6 +3880,9 @@ button,
   -ms-grid-column-span: 1;
   grid-column: 1/2;
   padding-left: 20px;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
 }
 @media (max-width: 767px) {
   .advantages__item--comfort {
@@ -3884,6 +3893,9 @@ button,
 
 .advantages__item--experience {
   grid-column: 3/-1;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
   padding-left: 10px;
 }
 @media (max-width: 1199px) {
@@ -3989,8 +4001,8 @@ button,
   color: transparent;
   -webkit-background-clip: text;
           background-clip: text;
-  background-image: -o-linear-gradient(307.49deg, #D10A42 0%, #0041CA 87.33%);
-  background-image: linear-gradient(142.51deg, #D10A42 0%, #0041CA 87.33%);
+  background-image: -o-linear-gradient(307.49deg, #d10a42 0%, #0041ca 87.33%);
+  background-image: linear-gradient(142.51deg, #d10a42 0%, #0041ca 87.33%);
 }
 @media (max-width: 1199px) {
   .advantage__counter .advantage__counter-main {
@@ -4655,7 +4667,7 @@ button,
 }
 
 .feedback__contacts {
-  border-top: 1px solid #74819C;
+  border-top: 1px solid #74819c;
   padding: 45px 50px 62px 120px;
 }
 @media (max-width: 1199px) {
@@ -4701,7 +4713,7 @@ button,
   .form h2 {
     font-size: 42px;
     line-height: 50px;
-    letter-spacing: 0.025em;
+    letter-spacing: 0.03em;
     margin-left: 1px;
   }
 }
@@ -4709,7 +4721,7 @@ button,
   .form h2 {
     font-size: 32px;
     line-height: 48px;
-    letter-spacing: 0.018em;
+    letter-spacing: 0.02em;
     margin-left: 0;
     margin-top: -2px;
   }
@@ -4743,7 +4755,7 @@ button,
   color: #ffffff;
   border: none;
   background-color: transparent;
-  border-bottom: 2px solid #74819C;
+  border-bottom: 2px solid #74819c;
 }
 
 .form input::-webkit-input-placeholder {
@@ -4955,8 +4967,8 @@ button,
 }
 
 .footer {
-  background-color: #030A1A;
-  color: white;
+  background-color: #030a1a;
+  color: #ffffff;
   padding: 44px 0 32px;
   min-width: 320px;
 }
