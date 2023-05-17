@@ -4,6 +4,7 @@
   min-width: 320px;
   display: flex;
   justify-content: space-between;
+  margin: auto;
   padding: 120px 103px 222px 163px;
 
   @include vp-1199 {
