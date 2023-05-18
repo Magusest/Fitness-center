@@ -2928,6 +2928,7 @@ button,
   list-style-type: none;
   margin: 0;
   padding: 0;
+  gap: 20px;
 }
 @media (max-width: 1199px) {
   .subscription__list {
@@ -5048,17 +5049,37 @@ button,
 .footer {
   background-color: #030a1a;
   color: #ffffff;
-  padding: 44px 0 32px;
+  padding: 41px 0 42px;
   min-width: 320px;
 }
 @media (max-width: 1199px) {
   .footer {
-    padding: 47px 0 49px;
+    padding: 44px 0 45px;
   }
 }
 @media (max-width: 767px) {
   .footer {
-    padding: 50px 0 52px;
+    padding: 52px 0 52px;
+  }
+}
+
+.footer__logo {
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  margin-bottom: -2px;
+}
+@media (max-width: 1199px) {
+  .footer__logo {
+    margin-bottom: 4px;
+  }
+}
+@media (max-width: 767px) {
+  .footer__logo {
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+    margin: 0;
   }
 }
 
@@ -5097,16 +5118,31 @@ button,
 }
 
 .footer__nav {
+  min-width: 429px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 40px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 11px;
+}
+@media (max-width: 1199px) {
+  .footer__nav {
+    min-width: 390px;
+    margin-left: 8px;
+  }
 }
 @media (max-width: 767px) {
   .footer__nav {
-    margin-top: -30px;
-    gap: 70px;
-    margin-bottom: 40px;
+    min-width: auto;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    gap: 76px;
+    margin: 0;
+    margin-top: -20px;
+    margin-bottom: 34px;
   }
 }
 
@@ -5118,22 +5154,35 @@ button,
   margin: 0;
   padding: 0;
 }
+@media (max-width: 1199px) {
+  .footer__nav ul {
+    gap: 30px;
+  }
+}
 @media (max-width: 767px) {
   .footer__nav ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 30px;
     margin-top: auto;
+    gap: 16px;
   }
 }
 
 .footer__nav a {
+  font-size: 14px;
+  line-height: 16px;
   color: #ffffff;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+}
+@media (max-width: 767px) {
+  .footer__nav a {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
 @media (hover: hover) {
   .footer__nav a:hover:not(.focus-visible) {
@@ -5148,9 +5197,15 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 10px;
+  gap: 12px;
   margin: 0;
   padding: 0;
+}
+@media (max-width: 1199px) {
+  .footer__social-media ul {
+    gap: 11px;
+    margin-right: -6px;
+  }
 }
 
 .footer__social-media li {
