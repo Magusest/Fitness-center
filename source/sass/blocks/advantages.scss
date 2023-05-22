@@ -1,10 +1,10 @@
 .advantages {
   background-color: $color-ghost-white;
-  padding: 98px 0 105px;
+  padding: 98px 0 133px;
   min-width: 320px;
 
   @include vp-1199 {
-    padding: 92px 0 80px;
+    padding: 92px 0 71px;
   }
 
   @include vp-767 {
@@ -48,8 +48,7 @@
   list-style-type: none;
   display: grid;
   grid-template-columns: 1fr 240px 1fr;
-  grid-template-rows: repeat(2, 134px);
-  gap: 102px 52px;
+  gap: 130px 52px;
   margin: 0;
   padding: 0 165px;
 
@@ -57,7 +56,7 @@
   @include vp-1199 {
     grid-template-columns: repeat(2, auto);
     grid-template-rows: auto 239px auto;
-    gap: 30px 45px;
+    gap: 36px 45px;
     padding: 0 45px;
   }
 
@@ -76,6 +75,7 @@
   width: 25%;
   height: 2px;
   background-color: $color-crimson-transparent;
+  bottom: 160px;
 
   @include vp-1199 {
     display: none;
@@ -83,15 +83,15 @@
 }
 
 .advantages__list::before {
-  top: 49%;
   left: 12%;
-  transform: translateY(-72%);
 }
 
 .advantages__list::after {
-  top: 49%;
   right: 12%;
-  transform: translateY(-72%);
+}
+
+.advantages__item {
+  align-self: baseline;
 }
 
 .advantages__item--space {
@@ -131,7 +131,8 @@
   grid-column: 2/3;
   grid-row: 1/3;
   background-color: $color-sapphire;
-  margin: auto 0;
+  align-self: center;
+  // margin: auto 0;
 
   @include vp-1199 {
     grid-column: 1/-1;

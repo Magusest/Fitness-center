@@ -1,16 +1,16 @@
 .advantage {
   display: grid;
   grid-template-columns: repeat(2, auto);
-  grid-template-rows: 53px 50px;
   gap: 6px 28px;
 
   @include vp-1199 {
-    gap: 0 28px;
+    gap: 10px 28px;
   }
 
   @include vp-767 {
     display: flex;
     flex-direction: column;
+    gap: 0;
     text-align: center;
   }
 }
@@ -21,13 +21,14 @@
   line-height: 33px;
   color: $color-sapphire;
   margin: 0;
+  margin-top: 18px;
   align-self: flex-end;
 
   @include vp-1199 {
     font-size: 20px;
     line-height: 30px;
     align-self: center;
-    margin-top: 7px;
+    margin-top: 13px;
     margin-left: 2px;
   }
 
@@ -83,16 +84,16 @@
   position: absolute;
   font-size: 14px;
   line-height: 21px;
-  bottom: 5px;
+  top: 84px;
   left: -1px;
 
   @include vp-1199 {
-    bottom: 14px;
+    top: 76px;
   }
 
   @include vp-767 {
     left: 50%;
-    bottom: -3px;
+    top: 70px;
     transform: translate(-50%);
   }
 }
@@ -101,9 +102,10 @@
   display: flex;
   flex-direction: column;
   height: 306px;
-  margin-bottom: 35px;
+  margin-bottom: -18px;
   padding: 38px 30px;
   text-align: center;
+  overflow-y: scroll;
   gap: 0;
 
   @include vp-1199 {
@@ -123,8 +125,8 @@
     color: $color-default-white;
     font-size: 26px;
     align-self: auto;
-    margin-top: -15px;
-    margin-bottom: 40px;
+    margin-top: -13px;
+    margin-bottom: 37px;
 
     @include vp-1199 {
       font-size: 22px;
