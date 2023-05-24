@@ -149,7 +149,7 @@
   @include vp-1199 {
     width: 266px;
     height: 167px;
-    bottom: 100px;
+    top: 587px;
     left: 46%;
     transform: translate(-39%);
   }
@@ -160,6 +160,7 @@
     left: 0;
     transform: translate(0);
     width: 100%;
+    height: 100%;
     margin: 0 auto;
     margin-top: 40px;
   }
@@ -174,10 +175,10 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
 
   @include vp-767 {
-    width: fit-content;
+    width: 100%;
+    height: 100%;
     left: 50%;
     transform: translate(-50%);
   }
@@ -195,6 +196,7 @@
   @include vp-767 {
     display: block;
     width: 100%;
+    height: min-content;
   }
 }
 

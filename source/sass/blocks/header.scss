@@ -30,6 +30,12 @@
   }
 }
 
+.header__contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+}
+
 .header__contact a {
   font-family: $ff-alumni;
   font-weight: 600;

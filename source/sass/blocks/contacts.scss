@@ -34,12 +34,31 @@
   }
 }
 
+.contacts div {
+  position: relative;
+  display: flex;
+  gap: 116px;
+
+  @include vp-1199 {
+    display: grid;
+    grid-template-columns: 312px 1fr;
+    gap: 0;
+  }
+
+  @include vp-767 {
+    margin-top: 31px;
+    grid-template-columns: 1fr;
+    gap: 19px;
+  }
+}
+
 .contacts ul {
   position: relative;
   list-style-type: none;
-  display: grid;
-  grid-template-columns: 226px 1fr;
-  gap: 16px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
   color: $color-sapphire;
   margin: 0;
   margin-top: 27px;
@@ -56,18 +75,18 @@
   @include vp-767 {
     grid-template-columns: 1fr;
     gap: 19px;
-    margin-top: 31px;
+    margin-top: 0;
   }
 }
 
-.contacts ul::after {
+.contacts div::after {
   content: "";
   position: absolute;
-  height: 88%;
+  height: 72%;
   width: 1px;
   background-color: $color-light-slate-grey;
-  left: 50.4%;
-  top: 5%;
+  left: 51%;
+  top: 24%;
 
   @include vp-1199 {
     left: 53%;
@@ -79,9 +98,14 @@
 }
 
 .contacts li {
+  width: 170px;
   display: flex;
   flex-direction: column;
   gap: 5px;
+
+  @include vp-1199 {
+    width: fit-content;
+  }
 }
 
 .contacts h3 {
@@ -113,11 +137,5 @@
 
   @include hover-focus {
     color: $color-egyptian-blue;
-  }
-}
-
-.contacts__item {
-  @include vp-767 {
-    grid-row: 2/3;
   }
 }
